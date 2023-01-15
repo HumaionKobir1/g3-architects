@@ -1,0 +1,151 @@
+/* google font style */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600&family=Work+Sans&display=swap');
+
+/* common styles or utilitis*/
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Header Part Start  */
+#header{
+    background: rgba(255, 144, 14, 0.1);
+}
+.nav-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10px;
+}
+.logo h1 a{
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
+}
+ul{
+    display: flex;
+    gap: 30px;
+}
+.main-menu ul li a{
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 4px;
+}
+a.active,a:hover{
+    background: rgba(255, 136, 0, 0.232);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/* banner area style */
+.banner-area{
+    text-align: center;
+    margin-top: 50px;
+}
+.banner-info{
+    width: 862px;
+    height: 225px;
+    margin: 0 auto;
+}
+.banner-info .banner-title{
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 30px;
+    padding: 0 115px;
+    margin-top: 0;
+}
+.banner-info .banner-desscription{
+    color: #727272;
+}
+.banner-area .banner-btn{
+    padding: 15px 25px;
+    background: #FF900E;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    border: none;
+}
+.banner-area img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media queries style for small device */
+@media only screen and (max-width: 600px) {
+    label.logo{
+        font-size: 30px;
+        
+    }
+    .main-menu ul li a{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .checkbtn{
+        display: block;
+    }
+    .nav-area{
+        padding: 30px 10px;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 110px;
+        left: 0;
+        text-align: center;
+        flex-direction: column;
+        transition: all .5s;
+    }
+    .main-menu ul{
+        height: 350px;
+    }
+    .main-menu ul li{
+        display: block;
+        margin-top: 20px;
+
+    }
+    .main-menu ul li a{
+        font-size: 20px;
+        color: aliceblue;
+    }
+    .checkbtn:checked ~ ul{
+        display: block;
+    }
+    
+}
