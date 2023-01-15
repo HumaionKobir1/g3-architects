@@ -57,7 +57,8 @@ label.logo{
     font-size: 17px;
     text-transform: uppercase; 
     border-radius: 3px;
-    padding: 7px 13px;   
+    padding: 7px 13px;
+    color: black;   
 }
 a.active,a:hover{
     background: #1b9bff;
