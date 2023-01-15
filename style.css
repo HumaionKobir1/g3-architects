@@ -36,40 +36,45 @@ body{
 #header{
     background: rgba(255, 144, 14, 0.1);
 }
-.nav-area{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 10px;
-}
-.logo h1 a{
-    font-weight: 700;
-    font-size: 45px;
+
+label.logo{
     color: #131313;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
-ul{
-    display: flex;
-    gap: 30px;
+.nav-area ul{
+    float: right;
+    margin-right: 20px;
 }
-.main-menu ul li a{
-    list-style: none;
-    font-weight: 500;
-    font-size: 18px;
-    padding: 7px 13px;
-    border-radius: 4px;
+.nav-area ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.nav-area ul li a{
+    font-size: 17px;
+    text-transform: uppercase; 
+    border-radius: 3px;
+    padding: 7px 13px;   
 }
 a.active,a:hover{
-    background: rgba(255, 136, 0, 0.232);
+    background: #1b9bff;
     transition: .5s;
 }
 .checkbtn{
     font-size: 30px;
     float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
 }
 #check{
     display: none;
 }
+
 
 /* banner area style */
 .banner-area{
@@ -146,6 +151,7 @@ a.active,a:hover{
     gap: 100px;
     /* justify-content: center;
     align-items: center; */
+    margin-bottom: 0;
 }
 .section-left-info{
     margin-top: 60px;
@@ -199,67 +205,137 @@ a.active,a:hover{
 
 
 
+/* some facts section style */
+.some-facts{
+    margin-top: 0;
+    top: 20;
+}
+
+.some-facts .section-description{
+    width: 550px;
+}
+.items{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.item{
+    width: 220px;
+    padding: 35px 40px;
+    border: 1px solid #FF900E;
+    border-radius: 8px;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.item:hover{
+    transition: transform 2s ease 0.0s;
+    transform: rotate(30deg) scale(.7);
+}
+.item img{
+    margin-bottom: 8px;
+}
+.item h2{
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 40px;
+    color: #424242;
+}
+.item p{
+    font-weight: 600;
+    font-size: 16px;
+    color: #727272;
+}
+
+
+/* Sponspores-area style */
+.sponsors-info{
+    width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsors-logo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* footer area style */
+footer{
+    background: #FFF4E7;
+    text-align: center;
+    padding: 40px 0;
+}
+.footer p{
+    font-size: 20px;
+    color: #424242;
+}
 
 
 
 
 
 
-
-
-/* Media queries style for small device */
-@media only screen and (max-width: 570px) {
-
-    label.logo{
+@media only screen and (max-width: 952px){
+    lable.logo{
         font-size: 30px;
-        
+        padding-left: 50px;
     }
-    .main-menu ul li a{
+    .nav-area ul li a{
         font-size: 16px;
     }
 }
 
-@media only screen and (max-width: 688px) {
-    .logo h1 a{
-        font-weight: 700;
-        font-size: 30px;
-    }
+
+
+@media only screen and (max-width: 689px) {
+    /* nav-area */
     .nav-area{
         border: 8px solid #FF900E;
-        padding: 20px 10px;
     }
+    .nav-area .logo{
+        font-size: 30px;
+        margin-left: 0;
+    }
+    label.logo{
+        padding: 0 20px;
+    }
+    
     .checkbtn{
         display: block;
     }
-
     ul{
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100vh;
         background: #2c3e50;
-        top: 110px;
-        left: 0;
+        
+        top: 80px;
+        left: -100%;
         text-align: center;
-        flex-direction: column;
         transition: all .5s;
-        display: none;
     }
-
-    .main-menu ul{
-        height: 350px;
-    }
-    .main-menu ul li{
+    .nav-area ul li{
         display: block;
-        margin-top: 20px;
+        margin: 50px 0;
+        line-height: 30px;
     }
-    .main-menu ul li a{
+    .nav-area ul li a{
         font-size: 20px;
-        color: aliceblue;
+        color: #FFF4E7;
     }
-    .checkbtn:checked ~ ul{
-        display: block;
+    a:hover,a.active{
+        background: none;
+        color: #1b9bff;
     }
-
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
 
     
     /* banner area */
@@ -285,7 +361,7 @@ a.active,a:hover{
     }
 
     /* main area quick list  */
-    .quick-list{
+.quick-list{
     display: flex;
     flex-direction: column;
 }
@@ -311,6 +387,7 @@ a.active,a:hover{
     color: #727272;
     font-weight: 400;
     font-size: 16px;
+    padding: 0 10px;
 }
 .features-section{
     flex-direction: column;
@@ -349,6 +426,36 @@ a.active,a:hover{
     width: 100%;
     height: 500px;
     margin-bottom: 10px;
+}
+
+
+/* some-facts */
+
+.some-facts .section-description, .section-title{
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+}
+.items{
+    margin-top: 100px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* sponspors section*/
+.sponsors-info{
+    width: 100%;
+    padding: 0 10px;
+}
+
+.sponsors-logo img{
+    width: 60px;
+    height: 30px;
+    justify-content: center;
+    padding: 0 10px;
 }
 
 }
