@@ -41,12 +41,10 @@ label.logo{
     color: #131313;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
     font-weight: bold;
 }
 .nav-area ul{
     float: right;
-    margin-right: 20px;
 }
 .nav-area ul li{
     display: inline-block;
@@ -63,6 +61,7 @@ label.logo{
 a.active,a:hover{
     background: #1b9bff;
     transition: .5s;
+    color: #FFFFFF !important;
 }
 .checkbtn{
     font-size: 30px;
